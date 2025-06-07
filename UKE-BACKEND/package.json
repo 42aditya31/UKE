@@ -24,18 +24,13 @@
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "typescript": "^5"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "196cd7c6-27ce-43fc-a500-f2e1487fdbdc",
-    "installId": "0158e1e9c59a2965c76202fe9a9809f7abc932b32c19ad8e5927580c4e1e96b3"
+    "uuid": "e45669f6-edec-47c9-9df4-5c0d11b5b2d0",
+    "installId": "77e87ffb508f6707ece3c95237bee6301ca74d7b559d50590c523bd24360db75"
   }
 }
