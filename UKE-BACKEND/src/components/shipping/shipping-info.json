@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shipping_shipping_infos",
+  "info": {
+    "displayName": "Shipping Info",
+    "icon": "shoppingCart"
+  },
+  "options": {},
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "postal_code": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
