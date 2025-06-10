@@ -1,9 +1,7 @@
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { fetchUser, getToken } from './authUtils';
-import { addUserInfo, clearUserInfo } from '../../store/userSlice';
-
-
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addUserInfo, clearUserInfo, setLoading } from "../../store/userSlice";
+import { fetchUser, getToken } from "./authUtils";
 
 const AuthProvider = ({ children }) => {
   const dispatch = useDispatch();
@@ -11,9 +9,14 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const init = async () => {
       const token = getToken();
+      dispatch(setLoading());
       if (token) {
         const user = await fetchUser(token);
-        user ? dispatch(addUserInfo(user)) : dispatch(clearUserInfo());
+        if (user) {
+          dispatch(addUserInfo(user));
+        }
+      } else {
+        dispatch(clearUserInfo());
       }
     };
     init();

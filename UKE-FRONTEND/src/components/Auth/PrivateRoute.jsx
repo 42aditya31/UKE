@@ -1,9 +1,16 @@
-import { useSelector } from 'react-redux';
-import { Navigate, Outlet } from 'react-router-dom';
+import { useSelector } from "react-redux";
+import { Navigate, Outlet } from "react-router-dom";
 
 const PrivateRoute = () => {
-  const user = useSelector((state) => state.user.user);
-  return user ? <Outlet /> : <Navigate to="/signin" />;
+  const { isLoggedIn, isFetching } = useSelector((state) => state.user);
+  console.log(isFetching, isLoggedIn, "logs here");
+  if (isFetching) {
+    return <>Loading...</>;
+  }
+  if (!isFetching && !isLoggedIn) {
+    return <Navigate to="/signin" />;
+  }
+  return <Outlet />;
 };
 
 export default PrivateRoute;

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { addUserInfo, clearUserInfo, setLoading } from "../../store/userSlice";
 import { setToken } from "./authUtils";
-import { addUserInfo } from "../../store/userSlice";
-
 
 const SignIn = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const dispatch = useDispatch();
   const [input, setInput] = useState({ email: "", password: "" });
 
@@ -16,6 +15,7 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch(setLoading());
     try {
       const res = await fetch("http://localhost:1337/api/auth/local", {
         method: "POST",
@@ -27,13 +27,15 @@ const SignIn = () => {
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error?.message || "Login failed");
+      // if (!res.ok) throw new Error(data.error?.message || "Login failed");
 
       setToken(data.jwt);
       dispatch(addUserInfo(data.user));
-      localStorage.setItem("userId",data?.user?.id)
-      navigate("/");
+      localStorage.setItem("userId", data?.user?.id);
+      // navigate("/home");
     } catch (err) {
+      dispatch(clearUserInfo());
+      // console.log(err, "error here");
       alert(err.message);
     }
   };
