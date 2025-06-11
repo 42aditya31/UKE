@@ -1,29 +1,6 @@
-import React from 'react'
-import FeatureCard from '../../components/ui/FeatureCard'
-
-const features = [
-  {
-    id: "feature_01",
-    icon: "🏠",
-    number: "01",
-    title: "Home Security",
-    description: "Protect what matters most with smart home surveillance. Our advanced cameras work 24/7 to keep your family and property secure—day or night, indoors or out."
-  },
-  {
-    id: "feature_02",
-    icon: "🔐",
-    number: "02",
-    title: "Access Control",
-    description: "Manage who enters your space with intelligent access. Authorize, monitor, and log entry in real time—only trusted individuals get in."
-  },
-  {
-    id: "feature_03",
-    icon: "🎧",
-    number: "03",
-    title: "24/7 Monitoring",
-    description: "Get round-the-clock peace of mind. Our system offers live alerts, remote access, and non-stop monitoring wherever you are."
-  }
-]
+import React from 'react';
+import FeatureCard from '../../components/ui/FeatureCard';
+import { features } from '../../data/data'; // ✅ Properly import the array
 
 const FeatureSection = () => {
   return (
@@ -40,7 +17,7 @@ const FeatureSection = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FeatureSection
+export default FeatureSection;

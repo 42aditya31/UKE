@@ -1,14 +1,34 @@
-import React from 'react'
-import HeroSection from './HeroSection'
-import FeatureSection from './FeatureSection'
+import React from "react";
+import HeroSection from "./HeroSection";
+import FeatureSection from "./FeatureSection";
+import { AboutUs, WhyUS } from "../../data/data";
+import BannerCard from "../../components/ui/bannerCard";
 
 const LandingPage = () => {
   return (
-    <div>
-      <HeroSection/>
-      <FeatureSection/>
+    <div className="py-20 my-5">
+      <HeroSection />
+      <FeatureSection />
+      <BannerCard
+       
+        image={AboutUs.image}
+        title={AboutUs.title}
+        description={AboutUs.description}
+        buttonText={AboutUs.buttonText}
+        stats={[
+          { icon: "👥", value: "1234", label: "Happy Customers" },
+          { icon: "📦", value: "1234", label: "Products Sold" },
+        ]}
+        reverse={false}
+      />
+      <BannerCard
+       image={WhyUS.image}
+       title={WhyUS.title}
+       description={WhyUS.description}
+       reverse={true}
+     />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;
