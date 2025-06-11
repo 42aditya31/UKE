@@ -3,6 +3,7 @@ import HeroSection from "./HeroSection";
 import FeatureSection from "./FeatureSection";
 import { AboutUs, WhyUS } from "../../data/data";
 import BannerCard from "../../components/ui/bannerCard";
+import OurServices from "./OurServieses";
 
 const LandingPage = () => {
   return (
@@ -21,6 +22,7 @@ const LandingPage = () => {
         ]}
         reverse={false}
       />
+      <OurServices/>
       <BannerCard
        image={WhyUS.image}
        title={WhyUS.title}

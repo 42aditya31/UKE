@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { clearUserInfo } from "../../store/userSlice";
 import { FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white px-6 py-3 rounded-full shadow-md flex justify-between items-center mx-4 mt-4 relative z-50">
       {/* Logo */}
-      <div className="text-lg font-bold text-green-600">UKE</div>
+      <div className="text-3xl font-sans font-bold text-green-600"><Link to={"/"}>UKE</Link></div>
 
       {/* Hamburger Icon */}
       <div className="md:hidden">
