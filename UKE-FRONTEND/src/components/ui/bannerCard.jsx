@@ -14,15 +14,11 @@ const BannerCard = ({
       <div
         className={`flex flex-col ${
           reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-        } items-center bg-white text-black rounded-xl shadow-lg overflow-hidden transition-all duration-300`}
+        } items-start bg-white text-black rounded-xl shadow-lg overflow-hidden transition-all duration-300`}
       >
         {/* Image Section */}
         <div className="w-full lg:w-1/2 max-h-[400px] aspect-video lg:aspect-auto">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
+          <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
 
         {/* Text Content Section */}
