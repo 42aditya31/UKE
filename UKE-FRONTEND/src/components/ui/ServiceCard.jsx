@@ -5,7 +5,7 @@ const ServiceCard = ({ icon, title, description, link }) => {
     <div className="border  shadow-sm text-center p-6 h-[300px] w-[220px] max-w-xs bg-white mx-auto">
       {/* Icon Circle */}
       <div className="w-16 h-16 rounded-full text-black text-3xl bg-gray-100 mx-auto flex items-center justify-center mb-4">
-        {/* <img src={icon} alt={title} className="w-8 h-8 text-green-600" /> */}
+      
         {icon}
       </div>
 

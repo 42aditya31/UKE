@@ -1,4 +1,4 @@
-import { FiAlertCircle, FiBriefcase, FiCamera, FiHome, FiLock, FiSmartphone} from "react-icons/fi";
+import { FiAlertCircle, FiBriefcase, FiCamera, FiHome, FiLock, FiMonitor, FiSmartphone} from "react-icons/fi";
 import { MdFingerprint } from "react-icons/md";
 
 
@@ -19,7 +19,7 @@ export const features = [
   },
   {
     id: "feature_03",
-    icon: <FiCamera/>,
+    icon: <FiMonitor/>,
     number: "03",
     title: "24/7 Monitoring",
     description: "Get round-the-clock peace of mind. Our system offers live alerts, remote access, and non-stop monitoring wherever you are."
