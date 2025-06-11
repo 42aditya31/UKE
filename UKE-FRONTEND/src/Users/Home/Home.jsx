@@ -1,9 +1,10 @@
 import React from 'react'
+import HeroSection from '../LandingPage/HeroSection'
 
 const Home = () => {
   return (
     <div>
-      Home page
+{/* <HeroSection/> */}
     </div>
   )
 }
