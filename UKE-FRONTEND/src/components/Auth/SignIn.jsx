@@ -25,20 +25,27 @@ const SignIn = () => {
           password: input.password,
         }),
       });
-
+  
       const data = await res.json();
-      // if (!res.ok) throw new Error(data.error?.message || "Login failed");
-
+  
+      if (!res.ok) {
+        // Show error alert if user not found or credentials are incorrect
+        const errorMessage = data?.error?.message || "User not found or invalid credentials";
+        alert(errorMessage);
+        dispatch(clearUserInfo());
+        return;
+      }
+  
       setToken(data.jwt);
       dispatch(addUserInfo(data.user));
       localStorage.setItem("userId", data?.user?.id);
       // navigate("/home");
     } catch (err) {
       dispatch(clearUserInfo());
-      // console.log(err, "error here");
-      alert(err.message);
+      alert("Something went wrong. Please try again.");
     }
   };
+  
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gradient-to-bl from-blue-50 to-blue-200">
