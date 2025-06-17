@@ -15,19 +15,18 @@ const OurServices = () => {
       {/* grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 max-w-7xl mx-2 */}
       {/* Services Grid */}
       <div className=" flex justify-center items-center">
-  <div className="flex flex-row flex-wrap justify-center md:gap-0 gap-2 max-w-7xl text-center">
-    {Services.map((service) => (
-      <ServiceCard
-        key={service.id}
-        title={service.title}
-        description={service.description}
-        link={service.link}
-        icon={service.icon}
-      />
-    ))}
-  </div>
-</div>
-
+        <div className="flex flex-row flex-wrap justify-center md:gap-0 gap-2 max-w-7xl text-center">
+          {Services.map((service) => (
+            <ServiceCard
+              key={service.id}
+              title={service.title}
+              description={service.description}
+              link={service.link}
+              icon={service.icon}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

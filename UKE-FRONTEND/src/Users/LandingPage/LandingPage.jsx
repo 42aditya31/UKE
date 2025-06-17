@@ -4,6 +4,8 @@ import FeatureSection from "./FeatureSection";
 import { AboutUs, WhyUS } from "../../data/data";
 import BannerCard from "../../components/ui/bannerCard";
 import OurServices from "./OurServieses";
+import TestimonialSection from "./TestimonialSection";
+import GetintouchSection from "./GetintouchSection";
 
 const LandingPage = () => {
   return (
@@ -11,7 +13,6 @@ const LandingPage = () => {
       <HeroSection />
       <FeatureSection />
       <BannerCard
-       
         image={AboutUs.image}
         title={AboutUs.title}
         description={AboutUs.description}
@@ -22,13 +23,15 @@ const LandingPage = () => {
         ]}
         reverse={false}
       />
-      <OurServices/>
+      <OurServices />
       <BannerCard
-       image={WhyUS.image}
-       title={WhyUS.title}
-       description={WhyUS.description}
-       reverse={true}
-     />
+        image={WhyUS.image}
+        title={WhyUS.title}
+        description={WhyUS.description}
+        reverse={true}
+      />
+      <GetintouchSection />
+      <TestimonialSection />
     </div>
   );
 };
