@@ -40,9 +40,9 @@ const SignIn = () => {
       dispatch(addUserInfo(data.user));
       localStorage.setItem("userId", data?.user?.id);
       // navigate("/home");
-    } catch (err) {
+    } catch (error) {
       dispatch(clearUserInfo());
-      alert("Something went wrong. Please try again.");
+      alert("Something went wrong. Please try again.",error);
     }
   };
   
