@@ -2,8 +2,6 @@ import { Star } from "lucide-react";
 
 function TestimonialCard({ profileImage, name, rating, testimonial }) {
 
-    console.log("name")
-
     const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, index) => (
       <Star
