@@ -31,7 +31,6 @@ const Home = () => {
             'Rounded CCTV Camera',
             'Squared CCTV Camera', 
             'CCTV Camera',
-            'CCTV Camera'
           ].map((camera, index) => (
             <label key={index} className="flex items-center space-x-3 cursor-pointer">
               <div className="relative">
@@ -53,7 +52,7 @@ const Home = () => {
                   )}
                 </div>
               </div>
-              <span className="text-gray-800 font-medium">{camera}</span>
+              <span className="text-white font-medium">{camera}</span>
             </label>
           ))}
         </div>
@@ -66,7 +65,7 @@ const Home = () => {
             <button
               key={spec}
               onClick={() => handleSpecToggle(spec)}
-              className={`px-4 py-2 rounded-lg font-medium transition-all ${
+              className={`px-4 py-2 rounded-lg cursor-pointer font-medium transition-all ${
                 selectedSpecs.includes(spec)
                   ? 'bg-emerald-500 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -82,7 +81,7 @@ const Home = () => {
             <button
               key={spec}
               onClick={() => handleSpecToggle(spec)}
-              className={`px-4 py-2 rounded-lg font-medium transition-all ${
+              className={`px-4 py-2 rounded-lg cursor-pointer font-medium transition-all ${
                 selectedSpecs.includes(spec)
                   ? 'bg-emerald-500 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -98,7 +97,7 @@ const Home = () => {
             <button
               key={spec}
               onClick={() => handleSpecToggle(spec)}
-              className={`px-4 py-2 rounded-lg font-medium transition-all ${
+              className={`px-4 py-2 rounded-lg cursor-pointer font-medium transition-all ${
                 selectedSpecs.includes(spec)
                   ? 'bg-emerald-500 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -117,7 +116,7 @@ const Home = () => {
             <button
               key={page}
               onClick={() => setSelectedPage(page)}
-              className={`w-12 h-12 rounded-xl font-semibold transition-all ${
+              className={`w-12 h-12 rounded-xl cursor-pointer font-semibold transition-all ${
                 selectedPage === page
                   ? 'bg-emerald-500 text-white shadow-lg'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -152,10 +151,10 @@ const Home = () => {
       {/* Price Range */}
       <div className="flex space-x-4">
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-6 py-3 shadow-lg">
-          <span className="text-2xl font-bold text-gray-800">$150</span>
+          <span className="text-2xl font-bold text-white">$150</span>
         </div>
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-6 py-3 shadow-lg">
-          <span className="text-2xl font-bold text-gray-800">$500</span>
+          <span className="text-2xl font-bold text-white">$500</span>
         </div>
       </div>
 
@@ -166,7 +165,7 @@ const Home = () => {
             <button
               key={status}
               onClick={() => setSelectedStock(status)}
-              className={`w-full px-4 py-3 rounded-xl font-medium transition-all ${
+              className={`w-full px-4 py-3 cursor-pointer rounded-xl font-medium transition-all ${
                 selectedStock === status
                   ? 'bg-emerald-500 text-white shadow-lg'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'

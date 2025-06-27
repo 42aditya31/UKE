@@ -15,7 +15,7 @@ const Navbar = () => {
     dispatch(clearUserInfo());
     localStorage.removeItem("userId");
     localStorage.removeItem("token");
-    navigate("/signin");
+    navigate("/");
   };
 
   const navLinkClasses = ({ isActive }) =>
