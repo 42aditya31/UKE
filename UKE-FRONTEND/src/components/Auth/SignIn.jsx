@@ -14,12 +14,13 @@ import {
   setLoading,
 } from "../../store/userSlice";
 import { setToken } from "./authUtils";
+import { useNavigate } from "react-router-dom";
 // import { useNavigate } from "react-router-dom"; // Uncomment if using navigation
 
 const SignIn = () => {
   // const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const [input, setInput] = useState({ email: "", password: "" });
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -29,6 +30,10 @@ const SignIn = () => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
+  const signUpHandle =()=>{
+    navigate("/signup")
+    console.log("you are dairected to the sign up page ")
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
@@ -59,7 +64,7 @@ const SignIn = () => {
       setToken(data.jwt);
       dispatch(addUserInfo(data.user));
       localStorage.setItem("userId", data?.user?.id);
-      // navigate("/home");
+      navigate("/home");
     } catch (error) {
       setError("Something went wrong. Please try again.", error);
       dispatch(clearUserInfo());
@@ -190,7 +195,7 @@ const SignIn = () => {
                 type="submit"
                 onClick={handleSubmit}
                 disabled={isLoading}
-                className="group relative w-full flex justify-center items-center py-3 px-4 border text-base font-medium rounded-xl text-white bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 border-gray-600"
+                className="group relative w-full flex justify-center items-center py-3 px-4 border text-base font-medium rounded-xl cursor-pointer text-white bg-gradient-to-r from-green-700 to-green-800 hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 border-gray-600"
               >
                 {isLoading ? (
                   <div className="flex items-center space-x-2">
@@ -211,8 +216,8 @@ const SignIn = () => {
                   Don’t have an account?{" "}
                   <button
                     type="button"
-                    onClick={() => alert("Sign up functionality to be implemented")}
-                    className="font-medium text-gray-300 hover:text-white transition-colors"
+                    onClick={() => signUpHandle()}
+                    className="font-medium cursor-pointer text-gray-300 hover:text-white transition-colors"
                   >
                     Create account
                   </button>

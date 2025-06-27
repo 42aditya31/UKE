@@ -149,7 +149,7 @@ const SignUp = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="group relative w-full flex justify-center items-center py-3 px-4 border text-base font-medium rounded-xl text-white bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 border-gray-600"
+                className="group relative w-full flex justify-center items-center py-3 px-4 border text-base font-medium rounded-xl text-white bg-gradient-to-r from-green-700 to-green-800 hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer border-gray-600"
               >
                 <span>Sign Up</span>
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
