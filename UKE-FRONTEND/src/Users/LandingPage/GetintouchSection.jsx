@@ -62,9 +62,11 @@ const GetintouchSection = () => {
   return (
     <div className="bg-black p-8">
       <div className="max-w-7xl mx-auto">
-        <img 
-        className="absolute w-80 left-[50%] mt-200 -translate-x-1/2 lg:left-270 lg:mt-7 md:left-[50%] md:-translate-x-1/2 md:mt-152 rounded-xl shadow-2xl hover:shadow-none transition-shadow duration-200 ease-in-out cursor-pointer z-50 md:w-100"
-        src="https://i.pinimg.com/736x/91/3d/83/913d83ca09f33bb029eaf2c7ea8291ee.jpg" alt="" />
+        <img
+          className="absolute w-80 h-118 left-[50%] mt-200 -translate-x-1/2 lg:left-270 lg:mt-7 md:left-[50%] md:-translate-x-1/2 md:mt-152 rounded-xl shadow-2xl hover:shadow-none transition-shadow duration-200 ease-in-out cursor-pointer z-50 md:w-90 md:h-auto"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToGJCbEKm6Dsj99yCQpINVH1UcHMlObtT9rQ&s"
+          alt=""
+        />
 
         <div className="grid lg:place-items-end md:place-items-center lg:grid-cols-2 gap-8 bg-white rounded-3xl shadow-lg">
           {/* Left Side - Contact Form */}
@@ -191,8 +193,7 @@ const GetintouchSection = () => {
           </div>
 
           {/* Right Side - Map */}
-          <div className="relative bg-green-500 lg:w-90 md:w-full min-h-[530px] md:min-h-[600px] lg:min-h-full overflow-hidden md:rounded-3xl lg:rounded-none lg:rounded-r-3xl rounded-3xl">
-          </div> 
+          <div className="relative bg-green-500 lg:w-90 md:w-full min-h-[530px] md:min-h-[600px] lg:min-h-full overflow-hidden md:rounded-3xl lg:rounded-none lg:rounded-r-3xl rounded-3xl"></div>
         </div>
       </div>
     </div>

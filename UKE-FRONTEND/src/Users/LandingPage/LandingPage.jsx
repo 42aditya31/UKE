@@ -6,6 +6,8 @@ import BannerCard from "../../components/ui/bannerCard";
 import OurServices from "./OurServieses";
 import TestimonialSection from "./TestimonialSection";
 import GetintouchSection from "./GetintouchSection";
+import ProductCard from "../../components/ProductCard/LandingpageProductCard";
+import BestProductSection from "./BestProductSection";
 
 const LandingPage = () => {
   return (
@@ -30,6 +32,7 @@ const LandingPage = () => {
         description={WhyUS.description}
         reverse={true}
       />
+      <BestProductSection />
       <GetintouchSection />
       <TestimonialSection />
     </div>

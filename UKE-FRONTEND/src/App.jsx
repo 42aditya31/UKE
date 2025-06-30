@@ -15,6 +15,8 @@ import Home from "./Users/Home/Home";
 import Cart from "./Users/Cart/Cart";
 
 import MainLayout from "./components/Layout/MainLayout";
+import AboutUs from "./Users/AboutUS/AboutUs";
+import ContactUs from "./Users/ContactUs/ContactUs";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
 
             <Route element={<MainLayout />}>
               <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<ContactUs />} />
 
               <Route element={<PrivateRoute />}>
                 <Route path="/home" element={<Home />} />

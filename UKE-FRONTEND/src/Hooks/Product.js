@@ -39,7 +39,9 @@ export const useProducts = (options = {}) => {
       if (sortOrder) params.append('sortOrder', sortOrder);
 
       const queryString = params.toString();
-      const url = `localhoste:1337/api/products${queryString ? `?${queryString}` : ''}`;
+      console.log(queryString);
+      // const url = `http://localhost:1337/api/products?limit=10&sortBy=name&sortOrder=asc`;
+      const url = `http://localhost:1337/api/products?populate=*`;
 
       const response = await fetch(url, {
         method: 'GET',
